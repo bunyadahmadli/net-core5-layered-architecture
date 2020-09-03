@@ -1,16 +1,4 @@
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Services.deps.json
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Services.dll
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Services.pdb
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Data.dll
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Entities.dll
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Shared.dll
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Entities.pdb
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Data.pdb
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Shared.pdb
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.csprojAssemblyReference.cache
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.AssemblyInfoInputs.cache
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.AssemblyInfo.cs
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.csproj.CoreCompileInputs.cache
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.csproj.CopyComplete
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.dll
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.pdb
