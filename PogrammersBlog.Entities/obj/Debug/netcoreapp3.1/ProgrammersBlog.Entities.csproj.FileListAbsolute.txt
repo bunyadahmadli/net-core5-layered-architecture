@@ -1,0 +1,12 @@
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\bin\Debug\netcoreapp3.1\ProgrammersBlog.Entities.deps.json
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\bin\Debug\netcoreapp3.1\ProgrammersBlog.Entities.dll
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\bin\Debug\netcoreapp3.1\ProgrammersBlog.Entities.pdb
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\bin\Debug\netcoreapp3.1\ProgrammersBlog.Shared.dll
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\bin\Debug\netcoreapp3.1\ProgrammersBlog.Shared.pdb
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\obj\Debug\netcoreapp3.1\ProgrammersBlog.Entities.csprojAssemblyReference.cache
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\obj\Debug\netcoreapp3.1\ProgrammersBlog.Entities.AssemblyInfoInputs.cache
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\obj\Debug\netcoreapp3.1\ProgrammersBlog.Entities.AssemblyInfo.cs
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\obj\Debug\netcoreapp3.1\ProgrammersBlog.Entities.csproj.CoreCompileInputs.cache
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\obj\Debug\netcoreapp3.1\ProgrammersBlog.Entities.csproj.CopyComplete
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\obj\Debug\netcoreapp3.1\ProgrammersBlog.Entities.dll
+C:\NetCore\ProgrammersBlog\PogrammersBlog.Entities\obj\Debug\netcoreapp3.1\ProgrammersBlog.Entities.pdb

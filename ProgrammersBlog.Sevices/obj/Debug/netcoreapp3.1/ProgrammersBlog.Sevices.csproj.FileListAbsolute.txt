@@ -1,0 +1,9 @@
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Sevices.deps.json
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Sevices.dll
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\bin\Debug\netcoreapp3.1\ProgrammersBlog.Sevices.pdb
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Sevices.csprojAssemblyReference.cache
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Sevices.AssemblyInfoInputs.cache
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Sevices.AssemblyInfo.cs
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Sevices.csproj.CoreCompileInputs.cache
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Sevices.dll
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Sevices\obj\Debug\netcoreapp3.1\ProgrammersBlog.Sevices.pdb
