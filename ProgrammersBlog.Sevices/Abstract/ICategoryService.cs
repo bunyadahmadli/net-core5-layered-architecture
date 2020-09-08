@@ -11,12 +11,13 @@ namespace ProgrammersBlog.Services.Abstract
 {
    public interface ICategoryService
    {
-       Task<IDataResult<Category>> Get(int categoryId);
-       Task<IDataResult<IList<Category>>> GetAll();
+       Task<IDataResult<CategoryDto>> Get(int categoryId);
+       Task<IDataResult<CategoryListDto>> GetAll();
 
-       Task<IDataResult<IList<Category>>> GetAllByNonDeleted();
+       Task<IDataResult<CategoryListDto>> GetAllByNonDeleted();
+       Task<IDataResult<CategoryListDto>> GetAllByNonDeletedAndActive();
 
-       Task<IResult> Add(CategoryAddDto categoryAddDto,string createByName);
+        Task<IResult> Add(CategoryAddDto categoryAddDto,string createByName);
        Task<IResult> Update(CategoryUpdateDto categoryUpdateDto, string modifiedByName);
        Task<IResult> Delete(int categoryId,string modifiedByName);
        Task<IResult> HardDelete(int categoryId);
