@@ -7,10 +7,11 @@
 }
 @if (Model.ResultStatus == ResultStatus.Success)
 {
-    <div class="card mb-4">
+    <div id="modalPlaceHolder" aria-hidden="true"></div>
+    <div class="card mb-4 mt-2">
         <div class="card-header">
             <i class="fas fa-table mr-1"></i>
-            DataTable Example
+            Kategoriler
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -44,36 +45,152 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                    
+
                         @foreach (var category in Model.Categories)
                         {
                             <tr>
-                            <td>@category.Id</td>
-                            <td>@category.Name</td>
-                            <td>@category.Description</td>
-                            <td>@category.IsActive</td>
-                            <td>@category.IsDeleted</td>
-                            <td>@category.Note</td>
-                            <td>@category.CreatedDate.ToShortDateString()</td>
-                            <td>@category.CreatedByName</td>
-                            <td>@category.ModifiedDate.ToShortDateString()</td>
-                            <td>@category.ModifeidByName</td>
+                                <td>@category.Id</td>
+                                <td>@category.Name</td>
+                                <td>@category.Description</td>
+                                <td>@category.IsActive</td>
+                                <td>@category.IsDeleted</td>
+                                <td>@category.Note</td>
+                                <td>@category.CreatedDate.ToShortDateString()</td>
+                                <td>@category.CreatedByName</td>
+                                <td>@category.ModifiedDate.ToShortDateString()</td>
+                                <td>@category.ModifeidByName</td>
                             </tr>
                         }
-                       
-                  
-                      
+
+
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 }
-@section Scripts
+@if (Model.ResultStatus == ResultStatus.Error)
 {
-    <script>
-        $(document).ready(function() {
-            $('#categoriesTable').DataTable();
-        });
-    </script>
+    <div class="alert alert-danger mt-3">
+        @Model.Message <br/>
+        Dashboard sayfasına gitmek için lütfen<a class="alert-link" asp-area="Admin" asp-controller="Home" asp-action="Index">tıklayınız.</a>
+    </div>
 }
+    @section Scripts
+    {
+        <script>
+            $(document).ready(function() {
+                $('#categoriesTable').DataTable({
+                    dom:
+                        "<'row'<'col-sm-3'l><'col-sm-6 text-center'B><'col-sm-3'f>>" +
+                            "<'row'<'col-sm-12'tr>>" +
+                            "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+                    buttons: [
+                        {
+                            text: 'Ekle',
+                            attr: {
+                                id: "btnAdd",
+                            },
+                            className: 'btn btn-success',
+                            action: function(e, dt, node, config) {
+
+                            }
+                        },
+                        {
+                            text: 'Yenile',
+                            className: 'btn btn-warning',
+                            action: function(e, dt, node, config) {
+                                alert('Yenile butonuna basıldı');
+                            }
+                        }
+                    ],
+                    language:
+                    {
+                        "sDecimal": ",",
+                        "sEmptyTable": "Tabloda herhangi bir veri mevcut değil",
+                        "sInfo": "_TOTAL_ kayıttan _START_ - _END_ arasındaki kayıtlar gösteriliyor",
+                        "sInfoEmpty": "Kayıt yok",
+                        "sInfoFiltered": "(_MAX_ kayıt içerisinden bulunan)",
+                        "sInfoPostFix": "",
+                        "sInfoThousands": ".",
+                        "sLengthMenu": "Sayfada _MENU_ kayıt göster",
+                        "sLoadingRecords": "Yükleniyor...",
+                        "sProcessing": "İşleniyor...",
+                        "sSearch": "Ara:",
+                        "sZeroRecords": "Eşleşen kayıt bulunamadı",
+                        "oPaginate": {
+                            "sFirst": "İlk",
+                            "sLast": "Son",
+                            "sNext": "Sonraki",
+                            "sPrevious": "Önceki"
+                        },
+                        "oAria": {
+                            "sSortAscending": ": artan sütun sıralamasını aktifleştir",
+                            "sSortDescending": ": azalan sütun sıralamasını aktifleştir"
+                        },
+                        "select": {
+                            "rows": {
+                                "_": "%d kayıt seçildi",
+                                "0": "",
+                                "1": "1 kayıt seçildi"
+                            }
+                        }
+                    }
+                });
+                @* DataTable Ends here *@
+                @* Ajax get begin *@
+                $(function() {
+                    const url = '@Url.Action("Add", "Category")';
+                    const placeHoderDiv = $('#modalPlaceHolder');
+                    $('#btnAdd').click(function() {
+                        $.get(url).done(function(data) {
+                            placeHoderDiv.html(data);
+                            placeHoderDiv.find(".modal").modal('show');
+                        });
+                    });
+                    @* Ajax get end *@
+                    @* Ajax Post begin *@
+                    placeHoderDiv.on('click',
+                        '#btnSave',
+                        function(event) {
+                            event.preventDefault();
+                            const form = $('#form-category-add');
+                            const actionUrl = form.attr('action');
+                            const dataToSend = form.serialize();
+                            $.post(actionUrl, dataToSend).done(function (data) {
+                                const categoryAddAjaxModel = jQuery.parseJSON(data);
+                                const newFormBody = $('.model-body', categoryAddAjaxModel.CategryAddPartial);
+                                placeHoderDiv.find('.modal-body').replaceWith(newFormBody);
+                                const isValid = newFormBody.find('[name="IsValid"]').val() === 'True';
+                                if (isValid) {
+                                    placeHoderDiv.find('.modal').modal('hide');
+                                    const newTableRow = `
+                                    <tr>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.Id}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.Name}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.Description}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.IsActive}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.IsDeleted}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.Note}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.CreateDate}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.CreateByName}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.ModifiedDate}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.ModifiedByName}</td>
+                                    </tr> `;
+                                    const newTableRowObject = jQuery(newTableRow);
+                                    console.log(newTableRowObject);
+                                    newTableRowObject.hide();
+                                    $('#categoriesTable').append(newTableRowObject);
+                                    console.log(newTableRowObject);
+                                    newTableRowObject.fadeIn(3500);
+                                    toastr.success(`${categoryAddAjaxModel.CategoryDto.Message}`, 'Başarılı İşlem!');
+
+                                }
+                            });
+                        });
+                    @* Ajax Post end *@
+                });
+            });
+        </script>
+    }

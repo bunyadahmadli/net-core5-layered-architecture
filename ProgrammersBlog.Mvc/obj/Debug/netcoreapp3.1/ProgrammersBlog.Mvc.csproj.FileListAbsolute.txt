@@ -394,3 +394,6 @@ C:\NetCore\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\netcoreapp3.1\staticweb
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\netcoreapp3.1\ProgrammersBlog.Mvc.dll
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\netcoreapp3.1\ProgrammersBlog.Mvc.pdb
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\netcoreapp3.1\ProgrammersBlog.Mvc.genruntimeconfig.cache
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\_CategoryAddPartial.cshtml.g.cs
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Mvc\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\NetCore\ProgrammersBlog\ProgrammersBlog.Mvc\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

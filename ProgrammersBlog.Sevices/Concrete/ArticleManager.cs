@@ -81,12 +81,12 @@ namespace ProgrammersBlog.Services.Concrete
             return new DataResult<ArticleListDto>(ResultStatus.Error, "Makaleler bulunamadı", null);
         }
 
-        public async Task<IDataResult<ArticleListDto>> GetAllByCategory(int catedoryId)
+        public async Task<IDataResult<ArticleListDto>> GetAllByCategory(int categoryId)
         {
-            var result = await _unitOfWork.Categories.AnyAsync(c => c.Id == catedoryId);
+            var result = await _unitOfWork.Categories.AnyAsync(c => c.Id == categoryId);
             if (result)
             {
-                var articles = await _unitOfWork.Articles.GetAllAsync(a => a.CategoryId == catedoryId && !a.IsDeleted && a.IsActive, a => a.User, a => a.Category);
+                var articles = await _unitOfWork.Articles.GetAllAsync(a => a.CategoryId == categoryId && !a.IsDeleted && a.IsActive, a => a.User, a => a.Category);
                 if (articles.Count > -1)
                 {
                     return new DataResult<ArticleListDto>(ResultStatus.Success, new ArticleListDto
@@ -108,7 +108,8 @@ namespace ProgrammersBlog.Services.Concrete
             article.CreatedByName = createByName;
             article.ModifeidByName = createByName;
             article.UserId = 1;
-            await _unitOfWork.Articles.AddAsync(article).ContinueWith(t=>_unitOfWork.SaveAsync());
+            await _unitOfWork.Articles.AddAsync(article);
+            await _unitOfWork.SaveAsync();
             return new Result(ResultStatus.Success,$"{articleAddDto.Title} başlıklı mekale başarıyla eklenmiştir.");
         }
 
@@ -116,7 +117,8 @@ namespace ProgrammersBlog.Services.Concrete
         {
             var article = _mapper.Map<Article>(articleUpdateDto);
             article.ModifeidByName = modifiedByName;
-            await _unitOfWork.Articles.UpdateAsync(article).ContinueWith(t => _unitOfWork.SaveAsync());
+            await _unitOfWork.Articles.UpdateAsync(article);
+            await _unitOfWork.SaveAsync();
             return new Result(ResultStatus.Success,$"{articleUpdateDto.Title} başlıklı mekale güncellenmiştir.");
         }
 
@@ -129,7 +131,8 @@ namespace ProgrammersBlog.Services.Concrete
                 article.IsDeleted = true;
                 article.ModifeidByName = modifiedByName;
                 article.ModifiedDate=DateTime.Now;
-                await _unitOfWork.Articles.UpdateAsync(article).ContinueWith(t => _unitOfWork.SaveAsync());
+                await _unitOfWork.Articles.UpdateAsync(article);
+                await _unitOfWork.SaveAsync();
                 return new Result(ResultStatus.Success, $"{article.Title} başlıklı mekale silinmiştir.");
             }
             return new Result(ResultStatus.Error,"Böyle bir mekale bulunamadı");
@@ -141,7 +144,8 @@ namespace ProgrammersBlog.Services.Concrete
             if (result)
             {
                 var article = await _unitOfWork.Articles.GetAsync(a => a.Id == articleId);
-                await _unitOfWork.Articles.DeleteAsync(article).ContinueWith(t => _unitOfWork.SaveAsync());
+                await _unitOfWork.Articles.DeleteAsync(article);
+                await _unitOfWork.SaveAsync();
                 return new Result(ResultStatus.Success, $"{article.Title} başlıklı mekale veritabanından silinmiştir.");
             }
             return new Result(ResultStatus.Error, "Böyle bir mekale bulunamadı");
