@@ -5,3 +5,5 @@
 obj/*
 migrations/*
 */obj/*
+Migrations/*
+Migrations
