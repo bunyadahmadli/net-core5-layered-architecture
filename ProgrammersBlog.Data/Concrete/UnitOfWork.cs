@@ -12,7 +12,7 @@ namespace ProgrammersBlog.Data.Concrete
    {
        private readonly ProgrammersBlogContext _context;
        private EfArticleRepository _articleRepository;
-       private EfCatedosyRepository _catedosyRepository;
+       private EfCatedosyRepository _categoryRepository;
        private EfCommentRepository _commentRepository;
        private EfRoleRepository _roleRepository;
        private EfUserRepository _userRepository;
@@ -24,7 +24,7 @@ namespace ProgrammersBlog.Data.Concrete
      
 
        public IArticleRepository Articles => _articleRepository ?? new EfArticleRepository(_context);
-       public ICategoryRepository Categories => _catedosyRepository ?? new EfCatedosyRepository(_context);
+       public ICategoryRepository Categories => _categoryRepository ?? new EfCatedosyRepository(_context);
        public ICommentRepository Comments => _commentRepository ?? new EfCommentRepository(_context);
        public IRoleRepository Roles => _roleRepository ?? new EfRoleRepository(_context);
        public IUserRepository Users => _userRepository ?? new EfUserRepository(_context);
