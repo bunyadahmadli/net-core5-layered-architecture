@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\NetCore\\ProgrammersBlog\\PogrammersBlog.Entities\\ProgrammersBlog.Entities.csproj",
         "projectName": "ProgrammersBlog.Entities",
         "projectPath": "C:\\NetCore\\ProgrammersBlog\\PogrammersBlog.Entities\\ProgrammersBlog.Entities.csproj",
-        "packagesPath": "C:\\Users\\enestasar\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\bunyadahmadli\\.nuget\\packages\\",
         "outputPath": "C:\\NetCore\\ProgrammersBlog\\PogrammersBlog.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\enestasar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bunyadahmadli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -66,11 +66,11 @@
         "projectUniqueName": "C:\\NetCore\\ProgrammersBlog\\ProgrammersBlog.Shared\\ProgrammersBlog.Shared.csproj",
         "projectName": "ProgrammersBlog.Shared",
         "projectPath": "C:\\NetCore\\ProgrammersBlog\\ProgrammersBlog.Shared\\ProgrammersBlog.Shared.csproj",
-        "packagesPath": "C:\\Users\\enestasar\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\bunyadahmadli\\.nuget\\packages\\",
         "outputPath": "C:\\NetCore\\ProgrammersBlog\\ProgrammersBlog.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\enestasar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bunyadahmadli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,7 +100,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.0-rc.1.20451.13, )"
             }
           },
           "imports": [
@@ -118,7 +118,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
