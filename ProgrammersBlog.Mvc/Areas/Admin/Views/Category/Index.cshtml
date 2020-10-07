@@ -160,7 +160,7 @@
                             const dataToSend = form.serialize();
                             $.post(actionUrl, dataToSend).done(function (data) {
                                 const categoryAddAjaxModel = jQuery.parseJSON(data);
-                                const newFormBody = $('.model-body', categoryAddAjaxModel.CategryAddPartial);
+                                const newFormBody = $('.modal-body', categoryAddAjaxModel.CategroyAddPartial);
                                 placeHoderDiv.find('.modal-body').replaceWith(newFormBody);
                                 const isValid = newFormBody.find('[name="IsValid"]').val() === 'True';
                                 if (isValid) {
@@ -173,12 +173,12 @@
                                         <td>${categoryAddAjaxModel.CategoryDto.Category.IsActive}</td>
                                         <td>${categoryAddAjaxModel.CategoryDto.Category.IsDeleted}</td>
                                         <td>${categoryAddAjaxModel.CategoryDto.Category.Note}</td>
-                                        <td>${categoryAddAjaxModel.CategoryDto.Category.CreateDate}</td>
-                                        <td>${categoryAddAjaxModel.CategoryDto.Category.CreateByName}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.CreatedDate}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.CreatedByName}</td>
                                         <td>${categoryAddAjaxModel.CategoryDto.Category.ModifiedDate}</td>
-                                        <td>${categoryAddAjaxModel.CategoryDto.Category.ModifiedByName}</td>
+                                        <td>${categoryAddAjaxModel.CategoryDto.Category.ModifeidByName}</td>
                                     </tr> `;
-                                    const newTableRowObject = jQuery(newTableRow);
+                                    const newTableRowObject = $(newTableRow);
                                     console.log(newTableRowObject);
                                     newTableRowObject.hide();
                                     $('#categoriesTable').append(newTableRowObject);

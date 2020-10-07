@@ -1,7 +1,6 @@
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Shared\bin\Debug\netcoreapp3.1\ProgrammersBlog.Shared.deps.json
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Shared\bin\Debug\netcoreapp3.1\ProgrammersBlog.Shared.dll
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Shared\bin\Debug\netcoreapp3.1\ProgrammersBlog.Shared.pdb
-C:\NetCore\ProgrammersBlog\ProgrammersBlog.Shared\obj\Debug\netcoreapp3.1\ProgrammersBlog.Shared.csprojAssemblyReference.cache
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Shared\obj\Debug\netcoreapp3.1\ProgrammersBlog.Shared.AssemblyInfoInputs.cache
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Shared\obj\Debug\netcoreapp3.1\ProgrammersBlog.Shared.AssemblyInfo.cs
 C:\NetCore\ProgrammersBlog\ProgrammersBlog.Shared\obj\Debug\netcoreapp3.1\ProgrammersBlog.Shared.csproj.CoreCompileInputs.cache
